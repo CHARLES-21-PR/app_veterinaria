@@ -185,7 +185,23 @@
 
   .flutter{
     background-color: #e58715;
+    padding: 20px 20px;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+  }
+
+  .flutter span{
     color: #fff;
+  }
+  .flutter_details{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: aqua;
+    width: 700px;
   }
   
 }
