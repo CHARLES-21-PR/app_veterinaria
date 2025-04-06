@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Flutter from './layauts/Flutter';
 import Nosotros from './comp/Nosotros';
+import Carousel from './comp/Carousel';
+
 
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
@@ -107,8 +109,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <p>El cuidado veterinario y los mejores productos para tu mascota en un solo lugar.</p>
                     <button data-bs-toggle="modal" data-bs-target="#exampleModal">Agenda tu consulta</button>
             </div>
-            <Nosotros />
-            <div>
+            <Nosotros  />
+            <div >
            
                 
 
@@ -140,7 +142,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 </div>
                 </div>
             </div>
+            <Carousel />
             <Flutter />
         </>
     );
 }
+

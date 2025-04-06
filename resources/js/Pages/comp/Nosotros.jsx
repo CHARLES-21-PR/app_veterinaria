@@ -2,7 +2,7 @@ import React from 'react'
 
 const nosotros = () => {
   return (
-    <div className='nosotros'>
+    <div className='nosotros' id="seccion_nosotros">
         <h1>Nosotros</h1>
         <h3>Queremos mejorar la calidad de vida de cada mascota.</h3>
         <p>Promovemos la excelencia en la atención veterinaria a través del uso de prácticas clínicas avanzadas, tecnología de última generación e innovación constante.</p>
