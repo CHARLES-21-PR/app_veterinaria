@@ -7,6 +7,9 @@ import Flutter from './layauts/Flutter';
 import Nosotros from './comp/nosotros';
 
 
+
+
+
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
