@@ -13,6 +13,7 @@ const Flutter = () => {
                 </div>
                 <div className="redes_flutter">
                     <h3>Redes Sociales</h3>
+                    <p>Facebook: @veterinaria Firu</p>
                 </div>
             </div>
         </div>

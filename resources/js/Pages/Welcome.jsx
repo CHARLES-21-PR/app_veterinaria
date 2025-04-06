@@ -4,7 +4,7 @@ import Dropdown from '@/Components/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Flutter from './layauts/Flutter';
-import Nosotros from './comp/nosotros';
+import Nosotros from './comp/Nosotros';
 
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
