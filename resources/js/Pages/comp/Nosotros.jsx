@@ -13,6 +13,7 @@ const nosotros = () => {
     </div>
     
   )
+  
 }
 
 export default nosotros
