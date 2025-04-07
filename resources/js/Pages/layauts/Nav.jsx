@@ -25,30 +25,30 @@ const components = [
     title: "Desparasitacion",
     href: "/docs/primitives/hover-card",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Tratamientos internos y externos para mantener sana a tu mascota.",
   },
   {
     title: "Baño y corte",
     href: "/docs/primitives/progress",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Baño con productos especiales, corte de pelo y limpieza de oídos.",
   },
   {
     title: "Vacunacion",
     href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    description: "Aplicación de vacunas obligatorias y opcionales según la especie y edad.",
   },
   {
     title: "Profilaxis",
     href: "/docs/primitives/tabs",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Limpieza dental profesional para prevenir enfermedades bucales.",
   },
   {
     title: "Esterilizacion",
     href: "/docs/primitives/tooltip",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Procedimiento quirúrgico seguro y eficaz para el control reproductivo.",
   },
 ]
 
