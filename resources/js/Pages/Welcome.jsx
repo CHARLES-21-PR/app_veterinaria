@@ -8,7 +8,7 @@ import Flutter from './layauts/Flutter';
 import Nosotros from './comp/Nosotros';
 import Carousel from './comp/Carousel';
 import Ubication from './comp/Ubication';
-
+import Services from './Services';
 
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
@@ -145,6 +145,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 </div>
             </div>
             <Carousel />
+            <Services />
             <Ubication />
             <Flutter />
         </>

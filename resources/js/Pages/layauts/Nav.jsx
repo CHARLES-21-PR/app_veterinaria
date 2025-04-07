@@ -71,14 +71,14 @@ const Nav = () => {
                       Somos Veterinaria FIRU
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                      Cuidado adecuado para tus mascotas con los mejores tratamientos
+                      de belleza y salud.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#ubicacion" title="Ubicacion">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="#ubicacion" title="Ubicación">
+                Nos encuentras en Av. Aviación 3001, San Borja, Lima - Perú.
               </ListItem>
               <ListItem href="/docs/installation" title="Installation">
                 How to install dependencies and structure your app.
@@ -106,9 +106,15 @@ const Nav = () => {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-        <Link href="/docs" className={navigationMenuTriggerStyle()}>
-            Contacto
-        </Link>
+
+        
+          <Link  href="https://api.whatsapp.com/send?phone=+51902862472&text=Hola Veterinaria Firu, 
+            vengo desde sus sitio web. Por favor, necesito información sobre ..." target="_blank" className={navigationMenuTriggerStyle()}>
+            
+              Contacto
+            
+          </Link>
+        
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
