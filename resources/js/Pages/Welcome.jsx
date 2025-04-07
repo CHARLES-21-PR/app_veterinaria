@@ -3,9 +3,11 @@ import  Nav  from './layauts/Nav';
 import Dropdown from '@/Components/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { SlNotebook } from "react-icons/sl";
 import Flutter from './layauts/Flutter';
 import Nosotros from './comp/Nosotros';
 import Carousel from './comp/Carousel';
+import Ubication from './comp/Ubication';
 
 
 
@@ -26,7 +28,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             <Head title="Welcome"/>
-            <div className="flex h-16 justify-between items-center mb-0 px-10 navigation fixed z-10 w-100 bg-white">
+            <div className="flex h-16 justify-between items-center mb-0 px-10 navigation fixed z-10 w-100 bg-white position-absolute top-0">
                 <div className='name_vete'>
                     <h3 className='mb-0'>veterinaria<span> FIRU</span></h3>
                 </div>
@@ -104,10 +106,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                            
                             
             </div>
-            <div className="view_principal">
+            <div className="view_principal mt-16">
                     <h3>Nuestros amigos de cuatro patas siempre felices</h3>
                     <p>El cuidado veterinario y los mejores productos para tu mascota en un solo lugar.</p>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal">Agenda tu consulta</button>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"><SlNotebook /> Agenda tu consulta</button>
             </div>
             <Nosotros  />
             <div >
@@ -143,6 +145,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 </div>
             </div>
             <Carousel />
+            <Ubication />
             <Flutter />
         </>
     );

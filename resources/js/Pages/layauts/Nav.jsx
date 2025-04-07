@@ -77,7 +77,7 @@ const Nav = () => {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Ubicacion">
+              <ListItem href="#ubicacion" title="Ubicacion">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
               <ListItem href="/docs/installation" title="Installation">
