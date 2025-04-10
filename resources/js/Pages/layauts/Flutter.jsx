@@ -28,6 +28,7 @@ const Flutter = () => {
                 </div>
                 
             </div>
+            <hr />
             <p>FIRU Veterinaria © Copyright 2025</p>
         </div>
     </div>

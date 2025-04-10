@@ -1,12 +1,15 @@
 
 import React from 'react';
+import AppLayout from './layauts/AppLayout';  
 
-const Services = () => {
+const Services = ({ auth }) => {
   return (
+    <AppLayout auth={auth}>
     <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, padding: 0, background: '#f0f0f0', color: '#333' }}>
       <style>
         {`
           .header {
+            margin-top: 65px;
             background-color: #4CAF50;
             color: white;
             padding: 20px 10px;
@@ -72,7 +75,7 @@ const Services = () => {
           }
         `}
       </style>
-
+      
       <header className="header">
         <h1>Servicios de la Veterinaria Firu</h1>
       </header>
@@ -115,6 +118,7 @@ const Services = () => {
         </section>
       </main>
     </div>
+    </AppLayout>
   );
 };
 

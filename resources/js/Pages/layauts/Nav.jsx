@@ -35,7 +35,7 @@ const components = [
   },
   {
     title: "Vacunacion",
-    href: "/docs/primitives/scroll-area",
+    href: "/servicios#vacunacion",
     description: "Aplicación de vacunas obligatorias y opcionales según la especie y edad.",
   },
   {
@@ -64,7 +64,7 @@ const Nav = () => {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md mb-0"
-                    href="#seccion_nosotros"
+                    href="welcome#seccion_nosotros"
                   >
                     <img src={logo} alt="Logo de Veterinaria FIRU" className="w-16 h-16 mb-4" />
                     <div className="mb-2 mt-4 text-lg font-medium">
@@ -93,6 +93,23 @@ const Nav = () => {
           <NavigationMenuTrigger>Servicios</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <li className="row-span-2">
+                <NavigationMenuLink asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md mb-0"
+                    href="/servicios"
+                  >
+                    <img src={logo} alt="Logo de Veterinaria FIRU" className="w-16 h-16 mb-4" />
+                    <div className="mb-2 mt-4 text-lg font-medium">
+                      Servicios
+                    </div>
+                    <p className="text-sm leading-tight text-muted-foreground">
+                      Cuidado adecuado para tus mascotas con los mejores tratamientos
+                      de belleza y salud.
+                    </p>
+                  </a>
+                </NavigationMenuLink>
+              </li>
               {components.map((component) => (
                 <ListItem
                   key={component.title}

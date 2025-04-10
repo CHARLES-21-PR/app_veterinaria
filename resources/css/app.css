@@ -68,12 +68,11 @@
     
   }
 
-  .nav_1{
-    position: fixed;
-  }
+  
 
   .navigation {
     font-size: 20px;
+    width: 100%;
   }
 
   .name_vete {
@@ -95,7 +94,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    
     padding-top: 25px;
   }
 
@@ -111,7 +110,7 @@
 }
 
 .view_principal * {
-  position: relative; /* Asegura que el contenido esté por encima del overlay */
+  
   z-index: 2;
 }
 
@@ -151,7 +150,7 @@
   }
   .nosotros {
     height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
   }
 
   .nosotros h1{
@@ -343,6 +342,8 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+    
   }
 
   .ubication-details a:hover{
@@ -363,5 +364,11 @@
     align-items: center;
     gap: 10px;
     
+  }
+
+  .flutter hr {
+    border: 0; 
+    height: 4px; 
+    background-color: #ffffff;
   }
 }
