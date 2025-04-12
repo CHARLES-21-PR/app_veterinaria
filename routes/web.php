@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\ContactoMailable;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -20,7 +23,18 @@ Route::get('/dashboard', function () {
 
 Route::get('/servicios', function () {
     return Inertia::render('Services');
-})->middleware(['auth', 'verified'])->name('Services');
+})->name('Services');
+
+// Route::get('/contacto', function () {
+//     Mail::to('carlos@veterinario.com')->send(new ContactoMailable());
+//     return 'Mensaje enviado';
+// })->name('Contacto');
+
+Route::get('/contacto', [ContactoController::class, 'index'])->name('Contacto');
+Route::post('/contacto/store', [ContactoController::class, 'store'])->name('Contacto.store');
+Route::get('/contactanos', function () {
+    return view('contacto.index');
+})->name('Contactanos');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

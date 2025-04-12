@@ -1,6 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
 import { SlNotebook } from "react-icons/sl";
 
 import Nosotros from './comp/Nosotros';
@@ -32,7 +34,9 @@ export default function Welcome({ auth}) {
             <div className="view_principal mt-16">
                     <h3>Nuestros amigos de cuatro patas siempre felices</h3>
                     <p>El cuidado veterinario y los mejores productos para tu mascota en un solo lugar.</p>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"><SlNotebook /> Agenda tu consulta</button>
+                    
+                    <a href="/contactanos" target='_blank'><SlNotebook /> Agenda tu consulta</a>
+                   
             </div>
             <Nosotros  />
             <div >
@@ -49,19 +53,22 @@ export default function Welcome({ auth}) {
                     </div>
                     <div className="modal-body">
                         
-                    <div className="mb-3">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Email:</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                    <form action="{{route('contacto.store')}}" method="POST">
+                        
+                        <div className="mb-3">
+                            <label htmlFor="exampleFormControlInput1" className="form-label">Email:</label>
+                            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name='email' />
                         </div>
                         <div className="mb-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Consulta:</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label htmlFor="exampleFormControlTextarea1" className="form-label">Consulta:</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name='mensaje'></textarea>
                         </div>
+                    </form>
 
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" className="btn btn-primary">Enviar</button>
+                        <button type="submit" className="btn btn-primary">Enviar</button>
                     </div>
                     </div>
                 </div>
