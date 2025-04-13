@@ -61,6 +61,7 @@
 @layer base {
   * {
     @apply border-border;
+    
   }
   body {
     @apply bg-background text-foreground;
@@ -77,6 +78,10 @@
 
   .name_vete {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .name_vete h3{
+    font-size: calc(1.3rem + .6vw);
   }
 
   .name_vete span{
@@ -123,7 +128,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
-  .view_principal button{
+  .view_principal a{
     display: flex;
     padding: 15px;
     font-size: 20px;
@@ -133,9 +138,10 @@
     color: white;
     border-radius: 20px;
     gap: 10px;
+    text-decoration: none;
   }
 
-  .view_principal button:hover{
+  .view_principal a:hover{
     background-color: #e58715;
   }
 

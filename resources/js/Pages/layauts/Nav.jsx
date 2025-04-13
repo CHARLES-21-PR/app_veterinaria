@@ -1,6 +1,12 @@
 
 
 import React from 'react';
+import { FaStethoscope } from "react-icons/fa";
+import { FaScissors } from "react-icons/fa6";
+import { BiInjection } from "react-icons/bi";
+import { FaTooth } from "react-icons/fa";
+import { LuBugOff } from "react-icons/lu";
+import { SiGooglemaps } from "react-icons/si";
 import { Link } from '@inertiajs/react';
 import { cn } from "@/lib/utils";
 import logo from '/public/img/logo.png';
@@ -17,36 +23,42 @@ import {
 const components = [
   {
     title: "Consulta",
-    href: "/docs/primitives/alert-dialog",
+    href: "/servicios#consulta",
+    img: <FaStethoscope />,
     description:
       "Atencion veterinaria a domicilio para perros y gatos.",
   },
   {
     title: "Desparasitacion",
-    href: "/docs/primitives/hover-card",
+    href: "/servicios#desparasitacion",
+    img: <LuBugOff />,
     description:
       "Tratamientos internos y externos para mantener sana a tu mascota.",
   },
   {
     title: "Baño y corte",
-    href: "/docs/primitives/progress",
+    href: "/servicios#bano",
+    img: <FaScissors />,
     description:
       "Baño con productos especiales, corte de pelo y limpieza de oídos.",
   },
   {
     title: "Vacunacion",
     href: "/servicios#vacunacion",
+    img: <BiInjection />,
     description: "Aplicación de vacunas obligatorias y opcionales según la especie y edad.",
   },
   {
     title: "Profilaxis",
-    href: "/docs/primitives/tabs",
+    href: "/servicios#profilaxis",
+    img: <FaTooth />,
     description:
       "Limpieza dental profesional para prevenir enfermedades bucales.",
   },
   {
     title: "Esterilizacion",
-    href: "/docs/primitives/tooltip",
+    href: "/servicios#esterilizacion",
+    img: <FaStethoscope />,
     description:
       "Procedimiento quirúrgico seguro y eficaz para el control reproductivo.",
   },
@@ -77,13 +89,13 @@ const Nav = () => {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#ubicacion" title="Ubicación">
+              <ListItem href="#ubicacion" title={<><SiGooglemaps /> Ubicación </>}>
                 Nos encuentras en Av. Aviación 3001, San Borja, Lima - Perú.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href="/docs/installation" title={<><SiGooglemaps /> Ubicación </>}>
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href="/docs/primitives/typography" title={<><SiGooglemaps /> Ubicación </>}>
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
@@ -92,7 +104,7 @@ const Nav = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Servicios</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[800px] gap-0 p-4 md:w-[400px] md:grid-cols-4 lg:w-[700px]">
             <li className="row-span-2">
                 <NavigationMenuLink asChild>
                   <a
@@ -114,6 +126,7 @@ const Nav = () => {
                 <ListItem
                   key={component.title}
                   title={component.title}
+                  img={component.img}
                   href={component.href}
                 >
                   {component.description}
@@ -126,13 +139,17 @@ const Nav = () => {
 
         
           
+          
+          <a href="https://api.whatsapp.com/send?phone=+51902862472&text=Hola Veterinaria Firu, 
+            vengo desde sus sitio web. Por favor, necesito información sobre ..." target='_blank' className={navigationMenuTriggerStyle()}>Contacto</a>
+        
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   )
 }
 
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
+const ListItem = React.forwardRef(({ className, title,img, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -144,8 +161,8 @@ const ListItem = React.forwardRef(({ className, title, children, ...props }, ref
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <div className="text-sm font-medium leading-none flex alig-item-center gap-1">{img} {title}</div>
+          <p className=" text-sm leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
