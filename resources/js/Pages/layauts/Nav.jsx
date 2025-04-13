@@ -125,7 +125,7 @@ const Nav = () => {
         <NavigationMenuItem>
 
         
-          <Link  href="https://api.whatsapp.com/send?phone=+51902862472&text=Hola Veterinaria Firu, 
+          <Link  href="https://api.whatsapp.com/send?phone=+999999999&text=Hola Veterinaria Firu, 
             vengo desde sus sitio web. Por favor, necesito información sobre ..." target="_blank" className={navigationMenuTriggerStyle()}>
             
               Contacto
