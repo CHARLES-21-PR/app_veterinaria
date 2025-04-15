@@ -7,6 +7,7 @@ import { BiInjection } from "react-icons/bi";
 import { FaTooth } from "react-icons/fa";
 import { LuBugOff } from "react-icons/lu";
 import { SiGooglemaps } from "react-icons/si";
+import { FaUserFriends } from "react-icons/fa";
 import { Link } from '@inertiajs/react';
 import { cn } from "@/lib/utils";
 import logo from '/public/img/logo.png';
@@ -72,7 +73,7 @@ const Nav = () => {
           <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] mb-0">
-              <li className="row-span-3">
+              <li className="row-span-2">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md mb-0"
@@ -89,15 +90,14 @@ const Nav = () => {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#ubicacion" title={<><SiGooglemaps /> Ubicación </>}>
+              <ListItem href="/welcome#ubicacion" title={<><SiGooglemaps /> Ubicación </>}>
                 Nos encuentras en Av. Aviación 3001, San Borja, Lima - Perú.
               </ListItem>
-              <ListItem href="/docs/installation" title={<><SiGooglemaps /> Ubicación </>}>
-                How to install dependencies and structure your app.
+              <ListItem href="/welcome#NuestraFamilia" title={<><FaUserFriends /> Nuestra familia </>}>
+              Somos una clínica veterinaria comprometida con ofrecer atención integral, basada en la ciencia,
+               tecnología avanzada y un cuidado ético y respetuoso para tu mascota.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title={<><SiGooglemaps /> Ubicación </>}>
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+              
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

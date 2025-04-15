@@ -3,7 +3,7 @@ import React from 'react'
 
 const Carousel = () => {
   return (
-    <div className='contenedor_carousel'>
+    <div id='NuestraFamilia' className='contenedor_carousel'>
       <div className="titulo_carousel flex flex-col justify-center items-center">
         <h2 className=''>Somos Vetipet</h2>
         <h3>Tu Veterinaria de Confianza</h3>
